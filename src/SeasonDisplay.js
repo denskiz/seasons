@@ -13,11 +13,10 @@ const seasonConfig = {
 };
 
 const getSeason = (lat, month) => {
-  if (month < 2 && month > 9) {
-    return lat > 0 ? "summer" : "winter";
-  } else {
-    return lat > 0 ? "winter" : "summer";
-  }
+   if (month > 2 && month < 9) {
+     // if lat is greater than 0 we must be in northern hemishere
+     return lat > 0 ? "summer" : "winter";
+   }
 };
 
 const SeasonDisplay = (props) => {
